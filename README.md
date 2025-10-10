@@ -13,6 +13,15 @@ This project provides a pre-configured Docker development environment that allow
 - 🔧 **Easy to Customize** - Modify the configuration to suit your project needs
 - 📦 **Isolated Environment** - Keep your host system clean and organized
 
+## Services
+
+- **Sidecar**: Development container with Go, PHP, Rust tooling
+- **PostgreSQL**: 18.0-alpine on port 5432
+- **MySQL**: 8.0.43 on port 3306
+- **Redis**: 8.2.2 with LRU cache on port 6379
+- **Kafka**: 4.1.0 KRaft mode on port 9094
+- **Kafbat UI**: Kafka management interface on port 8088
+
 ## Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) installed on your machine
