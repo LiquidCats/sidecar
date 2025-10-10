@@ -12,12 +12,12 @@ services:
     container_name: sidecar
     volumes:
       - golang_deps:/root/go
+      - ../:/development
+    working_dir: /development
     networks:
       - default
     ports:
       - "8080:8080"
-    environment:
-      - SPRING_PROFILES_ACTIVE=docker
 
 networks:
   default:
