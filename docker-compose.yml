@@ -11,6 +11,7 @@ services:
     image: sidecar:latest
     container_name: sidecar
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - golang_deps:/root/go
       - ../:/development
     working_dir: /development
