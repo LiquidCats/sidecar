@@ -1,0 +1,26 @@
+include:
+  - docker-compose.db.yml
+  - docker-compose.bus.yml
+
+services:
+  sidecar:
+    build:
+      context: dockerfiles/sidecar
+      dockerfile: Dockerfile
+    tty: true
+    image: sidecar:latest
+    container_name: sidecar
+    volumes:
+      - golang_deps:/root/go
+    networks:
+      - default
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+networks:
+  default:
+
+volumes:
+  golang_deps:
