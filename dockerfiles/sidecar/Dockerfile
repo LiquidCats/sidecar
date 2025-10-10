@@ -25,7 +25,8 @@ RUN apt install -y \
     php-cli  \
     php-mbstring \
     php-xml \
-    php-curl
+    php-curl \
+    lazygit
 
 # Install Docker CLI
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
