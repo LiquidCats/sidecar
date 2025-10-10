@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       # Cluster ID
-      CLUSTER_ID: ${KAFKA_CLUSTER_ID:-MkU3OEVBNTcwNTJENDM2Qk}
+      CLUSTER_ID: ${KAFKA_CLUSTER_ID:-42273d928e4648a6}
 
       # Listener Configuration
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:9094
@@ -92,7 +92,7 @@ services:
       LOGGING_LEVEL_COM_PROVECTUS: INFO
       SERVER_SERVLET_CONTEXT_PATH: /
     ports:
-      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:8088:8080"
     networks:
       - default
     depends_on:
