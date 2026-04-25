@@ -7,6 +7,8 @@ services:
     build:
       context: dockerfiles/sidecar
       dockerfile: Dockerfile
+      args:
+        - GOLANG_VERSION=1.26.1
     tty: true
     image: sidecar:latest
     container_name: sidecar

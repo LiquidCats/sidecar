@@ -1,6 +1,6 @@
-FROM debian:13.1-slim
+FROM debian:13.4-slim
 
-ARG GOLANG_VERSION=1.25.2
+ARG GOLANG_VERSION=1.26.1
 ARG GOLANG_ARCH=linux-arm64
 
 RUN apt update -y

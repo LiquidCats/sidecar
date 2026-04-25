@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:18.0-alpine
+    image: postgres:18.3-alpine
     container_name: postgres_db
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
@@ -21,7 +21,7 @@ services:
     read_only: true
 
   mysql:
-    image: mysql:8.0.43-debian
+    image: mysql:9.7.0
     container_name: mysql_db
     restart: unless-stopped
     environment:
@@ -58,7 +58,7 @@ services:
       - DAC_OVERRIDE
 
   redis:
-    image: redis:8.2.2-alpine
+    image: redis:8.6.2-alpine
     container_name: redis_cache
     restart: unless-stopped
     command: >
